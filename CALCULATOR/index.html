@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+	function add(){
+		var n1=document.getElementById('num1').value;
+		var n2=document.getElementById('num2').value;
+		var res=Number(n1)+Number(n2);
+        document.getElementById("results").value=res;
+	}
+	function sub(){
+		var n1=document.getElementById('num1').value;
+		var n2=document.getElementById('num2').value;
+		var res=Number(n1)-Number(n2);
+        document.getElementById("results").value=res;
+	}
+	function mul(){
+		var n1=document.getElementById('num1').value;
+		var n2=document.getElementById('num2').value;
+		var res=Number(n1)*Number(n2);
+        document.getElementById("results").value=res;
+	}
+	function divi(){
+		var n1=document.getElementById('num1').value;
+		var n2=document.getElementById('num2').value;
+		if (n2 != '0') 
+		{
+		var res=Number(n1)/Number(n2);
+	    }
+	    else
+	    {
+	    	var res= "Infinity";
+	    }
+        document.getElementById("results").value=res;
+	}
+</script>
+</head>
+<body>
+
+<h1><u>CALCULATOR</u></h1><br><br>
+NUMBER1:<br>
+<input type="number" name="num1" value="" id="num1"><br><br>
+NUMBER2:<br>
+<input type="number" name="num2" value="" id="num2"><br><br>
+
+
+<input type="button" name="add" value="Addition" onclick="add()" class="btn btn-primary"><br><br>
+<input type="button" name="Subraction" value="Subraction" onclick="sub()" class="btn btn-primary"><br><br>
+<input type="button" name="Multiplication" value="Multiplication" onclick="mul()" class="btn btn-primary"> <br><br>
+<input type="button" name="Division" value="Division" onclick="divi()" class="btn btn-primary"><br><br>
+RESULT:<br>
+<input type="text" name="result" value="" id="results">
+</body>
+</html>
